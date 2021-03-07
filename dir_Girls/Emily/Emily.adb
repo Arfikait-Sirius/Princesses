@@ -9,9 +9,13 @@ package body Emily is
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     procedure fnDispLine( message: String ) is
+     procedure fnDispLine( message: in String ) is
      begin
           Put_Line( message ) ;
+     end fnDispLine ;
+     procedure fnDispLine( number: in Integer ) is
+     begin
+          Put_Line( Integer'Image( number ) ) ;
      end fnDispLine ;
 
      --------------------------
