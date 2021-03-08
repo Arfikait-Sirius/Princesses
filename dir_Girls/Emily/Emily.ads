@@ -1,6 +1,6 @@
 package Emily is
-     procedure fnDispLine( message: in String ) ;
-     procedure fnDispLine( number: in Integer ) ;
-     procedure fnDispStr( message: String ) ;
-     procedure fnNewLine ;
+     procedure Fn_Disp_Line( message: in String ) ;
+     procedure Fn_Disp_Line( number: in Integer ) ;
+     procedure Fn_Disp_Str( message: String ) ;
+     procedure Fn_New_Line ;
 end Emily ;

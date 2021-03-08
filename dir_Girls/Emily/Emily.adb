@@ -4,41 +4,41 @@ use  Ada.Text_IO ;
 package body Emily is
      --------------------------
      -- :[ NAME ]:
-     --     fnDispLine
+     --     Fn_Disp_Line
      --
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     procedure fnDispLine( message: in String ) is
+     procedure Fn_Disp_Line( message: in String ) is
      begin
           Put_Line( message ) ;
      end fnDispLine ;
-     procedure fnDispLine( number: in Integer ) is
+     procedure Fn_Disp_Line( number: in Integer ) is
      begin
           Put_Line( Integer'Image( number ) ) ;
-     end fnDispLine ;
+     end Fn_Disp_Line ;
 
      --------------------------
      -- :[ NAME ]:
-     --     fnDispStr
+     --     Fn_Disp_Str
      --
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     procedure fnDispStr( message: String ) is
+     procedure Fn_Disp_Str( message: String ) is
      begin
           Put( message ) ;
-     end fnDispStr ;
+     end Fn_Disp_Str ;
 
      --------------------------
      -- :[ NAME ]:
-     --     fnNewLine
+     --     Fn_New_Line
      --
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     procedure fnNewLine is
+     procedure Fn_New_Line is
      begin
           Put_Line( "" ) ;
-     end fnNewLine ;
+     end Fn_New_Line ;
 end Emily ;

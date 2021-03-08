@@ -2,17 +2,16 @@ with Ada.Strings.Fixed ;
 use  Ada.Strings.Fixed ;
 with Ada.Strings.Maps.Constants ;
 use  Ada.Strings.Maps.Constants ;
-with Ada.Text_IO ;
 
 package body Louise is
      --------------------------
      -- :[ NAME ]:
-     --     fnCount
+     --     Fn_Count
      --
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     function fnCount( base: in String ; target: in String ) return Integer is
+     function Fn_Count( base: in String ; target: in String ) return Integer is
           count: Integer := 0 ;
      begin
           if base'Length < target'Length then
@@ -24,41 +23,42 @@ package body Louise is
                end if ;
           end loop ;
           return count ;
-     end fnCount ;
+     end Fn_Count ;
+
      --------------------------
      -- :[ NAME ]:
-     --     fnUpperAll
+     --     Fn_Upper_All
      --
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     function fnUpperAll( base: in String ) return String is
+     function Fn_Upper_All( base: in String ) return String is
      begin
           return Translate( base, Upper_Case_Map ) ;
-     end fnUpperAll ;
+     end Fn_Upper_All ;
 
      --------------------------
      -- :[ NAME ]:
-     --     fnLowerAll
+     --     Fn_Lower_All
      --
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     function fnLowerAll( base: in String ) return String is
+     function Fn_Lower_All( base: in String ) return String is
      begin
           return Translate( base, Lower_Case_Map ) ;
-     end fnLowerAll ;
+     end Fn_Lower_All ;
 
      --------------------------
      -- :[ NAME ]:
-     --     fnUpperFirst
+     --     Fn_Upper_First
      --
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     function fnUpperFirst( base: in String ) return String is
+     function Fn_Upper_First( base: in String ) return String is
      begin
           return Translate( base( base'First..base'First ), Upper_Case_Map )
                     & Translate( base( base'First + 1..base'Last ), Lower_Case_Map ) ;
-     end fnUpperFirst ;
+     end Fn_Upper_First ;
 end Louise ;
