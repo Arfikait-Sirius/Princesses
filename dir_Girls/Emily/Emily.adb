@@ -13,10 +13,6 @@ package body Emily is
      begin
           Put_Line( message ) ;
      end Fn_Disp_Line ;
-     procedure Fn_Disp_Line( number: in Integer ) is
-     begin
-          Put_Line( Integer'Image( number ) ) ;
-     end Fn_Disp_Line ;
 
      --------------------------
      -- :[ NAME ]:
