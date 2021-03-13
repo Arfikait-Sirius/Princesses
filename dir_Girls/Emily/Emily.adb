@@ -12,7 +12,7 @@ package body Emily is
      procedure Fn_Disp_Line( message: in String ) is
      begin
           Put_Line( message ) ;
-     end fnDispLine ;
+     end Fn_Disp_Line ;
      procedure Fn_Disp_Line( number: in Integer ) is
      begin
           Put_Line( Integer'Image( number ) ) ;
