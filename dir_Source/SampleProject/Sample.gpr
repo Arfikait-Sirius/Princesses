@@ -1,4 +1,0 @@
-project Sample is
-     for Source_Dirs use ( "./**", "../../dir_Girls/**" ) ;
-     for Exec_Dir use "bin" ;
-end Sample ;
