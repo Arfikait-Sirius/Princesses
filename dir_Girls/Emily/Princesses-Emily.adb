@@ -1,7 +1,7 @@
 with Ada.Text_IO ;
 use  Ada.Text_IO ;
 
-package body Emily is
+package body Princesses.Emily is
      --------------------------
      -- :[ NAME ]:
      --     Fn_Disp_Line
@@ -37,4 +37,4 @@ package body Emily is
      begin
           Put_Line( "" ) ;
      end Fn_New_Line ;
-end Emily ;
+end Princesses.Emily ;
