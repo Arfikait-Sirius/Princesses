@@ -3,7 +3,7 @@ use  Ada.Strings.Fixed ;
 with Ada.Strings.Maps.Constants ;
 use  Ada.Strings.Maps.Constants ;
 
-package body Louise is
+package body Princesses.Louise is
      --------------------------
      -- :[ NAME ]:
      --     Fn_Count
@@ -61,4 +61,4 @@ package body Louise is
           return Translate( base( base'First..base'First ), Upper_Case_Map )
                     & Translate( base( base'First + 1..base'Last ), Lower_Case_Map ) ;
      end Fn_Upper_First ;
-end Louise ;
+end Princesses.Louise ;

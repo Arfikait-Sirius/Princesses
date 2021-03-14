@@ -6,6 +6,9 @@ SET PROJECT_PATH=%1
 
 IF NOT EXIST %PROJECT_PATH%\Princesses\ (
      MKDIR %PROJECT_PATH%\Princesses
+     MKDIR %PROJECT_PATH%\bin
+     MKDIR %PROJECT_PATH%\obj
+     COPY .\dir_Modules\Princesses.ads %PROJECT_PATH%\. > NUL
 )
 XCOPY /S /Y .\dir_Girls\ %PROJECT_PATH%\Princesses\ > NUL
 
