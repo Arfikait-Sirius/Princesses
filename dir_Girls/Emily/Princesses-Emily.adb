@@ -9,9 +9,9 @@ package body Princesses.Emily is
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     procedure Fn_Disp_Line( message: in String ) is
+     procedure Fn_Disp_Line( Message: in String ) is
      begin
-          Put_Line( message ) ;
+          Put_Line( Message ) ;
      end Fn_Disp_Line ;
 
      --------------------------
@@ -21,9 +21,9 @@ package body Princesses.Emily is
      -- :[ CATEGORY ]:
      --     Skill
      --------------------------
-     procedure Fn_Disp_Str( message: String ) is
+     procedure Fn_Disp_Str( Message: in String ) is
      begin
-          Put( message ) ;
+          Put( Message ) ;
      end Fn_Disp_Str ;
 
      --------------------------
