@@ -1,29 +1,13 @@
 @ECHO OFF
 
-SETLOCAL ENABLEDELAYEDEXPANSION
+SET DIR_PRINCESSES=%1
 
-SET PROJECT_PATH=%1
-
-IF NOT EXIST %PROJECT_PATH%\Princesses\ (
-     MKDIR %PROJECT_PATH%\Princesses
-     MKDIR %PROJECT_PATH%\bin
-     MKDIR %PROJECT_PATH%\obj
-     COPY .\dir_Modules\Princesses.ads %PROJECT_PATH%\. > NUL
-)
-XCOPY /S /Y .\dir_Girls\ %PROJECT_PATH%\Princesses\ > NUL
-
-SET PROJECT_PATH_SPACE=%PROJECT_PATH:\= %
-FOR %%t IN ( %PROJECT_PATH_SPACE% ) DO (
-     SET PROJECT_NAME=%%t
+IF NOT EXIST %DIR_PRINCESSES%\Princesses\ (
+     MKDIR %DIR_PRINCESSES%\Princesses
+     COPY .\dir_Modules\Princesses.ads %DIR_PRINCESSES%\. > NUL
 )
 
-SET DEFAULT=_PROJECT_NAME_
-SET REPLACEMENT=%PROJECT_NAME%
+COPY .\dir_Girls\Emily\* %DIR_PRINCESSES%\Princesses\. > NUL
+COPY .\dir_Girls\Louise\* %DIR_PRINCESSES%\Princesses\. > NUL
 
-IF EXIST %1\%PROJECT_NAME%.gpr (
-     DEL %1\%PROJECT_NAME%.gpr
-)
-FOR /F "DELIMS=" %%t IN ( .\dir_Modules\Template.gpr ) DO (
-     SET LINE=%%t
-     ECHO !LINE:%DEFAULT%=%REPLACEMENT%!>>%1\%PROJECT_NAME%.gpr
-)
+ECHO "Completed!"
