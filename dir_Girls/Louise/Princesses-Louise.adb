@@ -27,6 +27,21 @@ package body Princesses.Louise is
 
      --------------------------
      -- :[ NAME ]:
+     --     Fn_Replace
+     --
+     -- :[ CATEGORY ]:
+     --     Skill
+     --------------------------
+     function Fn_Replace( Base: in String ; Target: in String ; Replacement: in String ) return String is
+          I: constant Integer := Index( Base, Target ) ;
+          Head: String := Base( Base'First..( I - 1 ) ) ;
+          Tail: String := Base( ( I + Target'Last )..Base'Last ) ;
+     begin
+          return Head & Replacement & Tail ;
+     end Fn_Replace ;
+
+     --------------------------
+     -- :[ NAME ]:
      --     Fn_Upper_All
      --
      -- :[ CATEGORY ]:
