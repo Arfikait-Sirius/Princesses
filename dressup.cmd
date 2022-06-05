@@ -10,4 +10,4 @@ IF NOT EXIST %DIR_PRINCESSES%\Princesses\ (
 COPY .\dir_Girls\Emily\* %DIR_PRINCESSES%\Princesses\. > NUL
 COPY .\dir_Girls\Louise\* %DIR_PRINCESSES%\Princesses\. > NUL
 
-ECHO "Completed!"
+ECHO Completed!
